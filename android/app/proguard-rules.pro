@@ -8,3 +8,6 @@
 #   http://developer.android.com/guide/developing/tools/proguard.html
 
 # Add any project specific keep options here:
+
+# react-native-config reads BuildConfig via reflection at runtime — Proguard renames it otherwise.
+-keep class com.matrimony_mobile.BuildConfig { *; }
